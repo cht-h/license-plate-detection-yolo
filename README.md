@@ -1,4 +1,4 @@
 # Computer Vision License Plate Detection
 
-**Students:** 
+**Students:** Angelina Chernikova & Agafonov Ruslan 
 **Group:** 972401
