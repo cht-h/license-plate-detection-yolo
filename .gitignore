@@ -1,0 +1,37 @@
+#byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+#virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+#poetry
+poetry.lock
+
+#IDE
+.vscode/
+.idea/
+
+#project specific
+data/raw/*
+data/processed/*
+data/logs/*
+data/outputs/*
+!data/logs/.gitkeep
+!data/outputs/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+#WandB
+wandb/
+/wandb-offline-*
+
+#ML models
+*.pt
+*.pth
+*.weights
+runs/
