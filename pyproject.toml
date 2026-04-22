@@ -1,28 +1,42 @@
-[project]
-name = "ml2"
+[tool.poetry]
+name = "license-plate-detection"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "karma",email = "chernikoaan@yandex.com"}
-]
-readme = "README.md"
-requires-python = ">=3.14,<3.15"
-dependencies = [
-    "torch (>=2.10.0,<3.0.0)",
-    "torchvision (>=0.25.0,<0.26.0)",
-    "torchaudio (>=2.10.0,<3.0.0)",
-    "ultralytics (>=8.4.24,<9.0.0)",
-    "opencv-python (>=4.13.0.92,<5.0.0.0)",
-    "numpy (>=2.4.3,<3.0.0)",
-    "wandb (>=0.25.1,<0.26.0)",
-    "pyyaml (>=6.0.3,<7.0.0)"
-]
+description = "License plate detection system using YOLO"
+authors = ["uaneere <rus.agafonov29@gmail.com>"]
+package-mode = false
 
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.0.0"
+torchvision = "^0.15.0"
+opencv-python = "^4.8.0"
+numpy = "^1.24.0"
+ultralytics = "^8.0.0"
+wandb = "^0.15.0"
+pytest = "^7.4.0"
+loguru = "^0.7.0"
+click = "^8.1.0"
+pillow = "^10.0.0"
+matplotlib = "^3.7.0"
+seaborn = "^0.12.0"
+tqdm = "^4.65.0"
+scikit-learn = "^1.3.0"
+notebook = "^7.5.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.0.0"
+flake8 = "^6.0.0"
+mypy = "^1.4.0"
+pre-commit = "^3.3.0"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.black]
+line-length = 88
+target-version = ['py310']
 
-[tool.poetry.scripts]
-license-plate-detect = "main:main"
+[tool.isort]
+profile = "black"
+line_length = 88

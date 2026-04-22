@@ -1,37 +1,67 @@
-#byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-#virtual environments
-.venv/
+*.so
+.Python
 env/
 venv/
 ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-#poetry
-poetry.lock
+# Data
+data/train/
+data/valid/
+data/test/
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.npy
+log_file.log
 
-#IDE
+
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-#project specific
-data/raw/*
-data/processed/*
-data/logs/*
-data/outputs/*
-!data/logs/.gitkeep
-!data/outputs/.gitkeep
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+# Jupyter
+.ipynb_checkpoints/
 
-#WandB
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ML
 wandb/
-/wandb-offline-*
-
-#ML models
+runs/
 *.pt
 *.pth
-*.weights
-runs/
+*.onnx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.logdata.rar
